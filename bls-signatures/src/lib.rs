@@ -189,6 +189,14 @@ pub mod poly;
 /// BLS Signature implementations. Supports blind and threshold signatures.
 pub mod sig;
 
+pub mod error;
+pub mod key;
+pub mod sig_aggregate;
+
+#[cfg(test)]
+#[macro_use]
+extern crate base64_serde;
+
 /// Pre-instantiated signature schemes for each curve
 pub mod schemes {
     use crate::sig::{G1Scheme, G2Scheme};
